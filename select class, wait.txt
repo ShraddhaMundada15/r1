@@ -1,0 +1,106 @@
+Select  class
+-----------------
+	has methods to select a value from a drop down list.
+<select id="city">
+   <option value="1">hyd</option>
+   <option value="2">blore</option>
+   <option value="3">chennai</option>
+   <option value="4">delhi</option>
+
+
+Select s = new Select(driver.findElement(By.id("city")));
+s.selectByVisibleText("chennai");
+	OR
+s.selectByValue("3");
+	OR
+s.selectByIndex(2);
+
+new Select(driver.findElement(By.id("city"))).selectByVisibleText("delhi");
+======================================
+
+
+FirefoxDriver / ChromeDriver
+------------------------------
+	get("url")
+	findElement(By............)
+
+
+WebElement
+---------------------
+	sendKeys("       ");
+	getText();
+	click()
+
+Actions
+-----------
+	moveToElement
+	dragAndDrop
+
+Select
+-----------
+	selectByVisibleText()
+	selectByValue()
+	selectByIndex()
+=============================
+
+wait
+======
+	for some transactions, application will take time to complete the transaction.
+	the script execution should wait for sometime, till the transaction is completed and continue.
+		2 types of wait
+
+	 . implicit wait
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+					               time, units
+
+		 
+		any where in the program, if element is not found it will consider wait.
+	               if element is found within the time, it will continue.
+			(so it is considered for   findElement)
+
+
+	 . explicit wait
+		based on the need,,, we need diff wait times for diff statements in the code
+		
+		Thread.sleep(millisec);
+		 it will compulsory wait for the time specified and then continue to next line.
+
+
+Exceptions
+-------------------
+	these are unexpected / possible errors raised during runtime.
+
+	Exception  ------ parent class
+	    FileNotFoundException
+	    ArrayIndexOutOfBoundException
+	    NullPointerException
+                   InterruptedException
+                   NoSuchElementException...............etc
+
+		2 ways to handle exceptions
+
+		.  try, catch block
+		.  throws
+
+		try, catch
+		----------------
+			the code which is possibility of raising exception, write in try block
+		   and handle the exception in  catch block.
+			after try block,,immediatly catch block should start   ( no code between try block, catch block)
+			every try should have atleast one or more catch blocks.
+			a try block can have one more try block,,,, every try should have its own catch block.
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
