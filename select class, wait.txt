@@ -1,5 +1,6 @@
 Select  class
 -----------------
+
 	has methods to select a value from a drop down list.
 <select id="city">
    <option value="1">hyd</option>
